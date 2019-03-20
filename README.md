@@ -2,6 +2,18 @@
 [![npm version](https://badge.fury.io/js/steal-vue.svg)](https://badge.fury.io/js/steal-vue)
 
 
+# KNOWN ISSUES
+
+1. You have to do an `Empty Cache & Hard Reload` for changes to occur in the browser (not cool)
+1. Steal-Sass is just straight up broken and breaks everything else if used
+1. Exporting CSS during a build is busted
+
+
+# Current State
+
+1. Removing Sass references allows this to run locally for development (though requires manually emptying cache and hard reloading to see changes)
+
+
 # StealJS plugin for Vue.js Single File Components.
 
 Steal ([StealJS](http://stealjs.com/)) is a module loader with sane defaults.  With the _steal-vue_ plugin, Steal can bundle Vue.js Single File Components with your application.  In addition to CSS styles, it includes support for Sass styles by using the `lang` attribute.
