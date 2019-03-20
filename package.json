@@ -6,7 +6,16 @@
   "repository": "https://github.com/icanjs/steal-vue",
   "author": "Marshall Thompson - marshall@creativeideal.net",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "steal": "^2.1.14",
+    "steal-css": "^1.3.2",
+    "steal-sass": "^1.1.1",
+    "vue": "^2.6.6",
     "vue-template-compiler": "^2.6.6"
   },
   "steal": {
@@ -15,14 +24,8 @@
     },
     "plugins": [
       "steal-css",
-      "steal-less",
+      "steal-sass",
       "steal-vue"
     ]
-  },
-  "devDependencies": {
-    "steal": "^2.1.14",
-    "steal-css": "^1.3.2",
-    "steal-less": "^1.3.4",
-    "vue": "^2.6.6"
   }
 }

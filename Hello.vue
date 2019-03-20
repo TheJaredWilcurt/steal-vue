@@ -1,26 +1,26 @@
 <template>
-  <p class="hello-vue">{{message}}</p>
+  <p class="hello-vue">{{ message }}</p>
 </template>
 
 <script>
 export default {
-  name: 'hello',
-  data () {
+  name: 'Hello',
+  data: function () {
     return {
       message: 'Hello, Vue!'
-    }
+    };
   },
   methods: {
-    log (value) {
-      console.log(value)
+    log: function (value) {
+      console.log(value);
     }
   }
-}
+};
 </script>
 
 <style scoped>
 p {
-  padding: 100px;
+  padding: 20px;
 }
 
 p.hello-vue {

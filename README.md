@@ -1,9 +1,11 @@
 [![Build Status](https://travis-ci.org/stealjs/steal-vue.svg?branch=master)](https://travis-ci.org/stealjs/steal-vue)
 [![npm version](https://badge.fury.io/js/steal-vue.svg)](https://badge.fury.io/js/steal-vue)
 
+
 # StealJS plugin for Vue.js Single File Components.
 
-Steal ([StealJS](http://stealjs.com/)) is a module loader with sane defaults.  With the _steal-vue_ plugin, Steal can bundle Vue.js Single File Components with your application.  In addition to CSS styles, it includes support for Less, and Sass styles by using the `lang` attribute.
+Steal ([StealJS](http://stealjs.com/)) is a module loader with sane defaults.  With the _steal-vue_ plugin, Steal can bundle Vue.js Single File Components with your application.  In addition to CSS styles, it includes support for Sass styles by using the `lang` attribute.
+
 
 ## Install
 
@@ -21,11 +23,12 @@ You'll want to also update your `steal` config.  Add `steal-vue` to your list of
     "plugins": [
       "steal-vue",
       "steal-css",
-      "steal-less"
+      "steal-sass"
     ]
   }
 }
 ```
+
 
 ## Use
 
@@ -34,33 +37,31 @@ After you've installed the plugin, you'll be able to load `.vue` files.  For exa
 ```vue
 // Hello.vue
 <template>
-  <p class="hello-less">{{message}}</p>
+  <p class="hello-sass">{{ message }}</p>
 </template>
 
 <script>
 export default {
-  name: 'hello-less',
-  data () {
+  name: 'hello-sass',
+  data: function () {
     return {
-      message: 'Hello, Vue with Less!'
-    }
+      message: 'Hello, Vue with Sass!'
+    };
   },
   methods: {
-    log (value) {
-      console.log(value)
+    log: function (value) {
+      console.log(value);
     }
   }
-}
+};
 </script>
 
-<style lang="less">
-p {
-  padding: 100px;
-  &.hello-less {
-    color: lightseagreen;
-    font-weight: bold;
-  }
-}
+<style lang="sass">
+p
+  padding: 100px
+  &.hello-sass
+    color: lightseagreen
+    font-weight: bold
 </style>
 ```
 
@@ -84,8 +85,12 @@ var app = new Vue({
 });
 ```
 
+
 ## Demo
-Run the (admittedly simple) demo by cloning this repo, running `npm install` or `yarn`, and starting an http-server in the root folder.
+
+Run the (admittedly simple) demo by cloning this repo, running `npm install && npm start` in the root folder.
+
+
 ## License
 
 MIT

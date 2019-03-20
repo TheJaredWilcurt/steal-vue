@@ -1,29 +1,29 @@
 <template>
-  <p class="hello-less">{{message}}</p>
+  <p class="hello-sass">{{ message }}</p>
 </template>
 
 <script>
 export default {
-  name: 'hello-less',
-  data () {
+  name: 'HelloSass',
+  data: function () {
     return {
-      message: 'Hello, Vue with Less!'
-    }
+      message: 'Hello, Vue with Sass!'
+    };
   },
   methods: {
-    log (value) {
-      console.log(value)
+    log: function (value) {
+      console.log(value);
     }
   }
-}
+};
 </script>
 
-<style lang="less">
-p {
-  padding: 100px;
-  &.hello-less {
-    color: lightseagreen;
-    font-weight: bold;
-  }
-}
+<style lang="sass">
+p
+    padding: 20px
+
+p.hello-sass
+    color: lightseagreen
+    font-weight: bold
+
 </style>

@@ -1,19 +1,19 @@
 import Vue from 'vue/dist/vue';
 import Hello from './Hello.vue';
-import HelloLess from './Hello.Less.vue';
-import HelloNoStyle from './Hello.NoStyle.vue';
-import HelloRenderless from './Hello.Renderless.vue';
+import HelloSass from './HelloSass.vue';
+import HelloNoStyle from './HelloNoStyle.vue';
+import HelloRenderless from './HelloRenderless.vue';
 
 var app = new Vue({
   el: '#app',
   template: `<div>
     <Hello />
-    <HelloLess />
+    <HelloSass />
     <HelloNoStyle />
     <HelloRenderless v-slot="{ message, up, down, total }">
-      <p>
-        {{message}}<br/>
-        Current total is {{total}}</br>
+      <p class="hello-renderless">
+        {{ message }}<br/>
+        Current total is {{ total }}</br>
         <button @click="down">Down</button>
         <button @click="up">Up</button>
       </p>
@@ -21,7 +21,7 @@ var app = new Vue({
   </div>`,
   components: {
     Hello,
-    HelloLess,
+    HelloSass,
     HelloNoStyle,
     HelloRenderless
   }
